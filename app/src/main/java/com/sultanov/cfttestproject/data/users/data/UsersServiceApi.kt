@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 internal interface UsersServiceApi {
 
-    @GET("/api")
+    @GET("/api/?results=25")
     @WorkerThread
     suspend fun getUsers(): GetUsersResponseDto
 

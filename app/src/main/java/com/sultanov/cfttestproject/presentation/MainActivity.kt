@@ -3,28 +3,47 @@ package com.sultanov.cfttestproject.presentation
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.coroutineScope
-import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.RecyclerView
 import com.sultanov.cfttestproject.R
 import com.sultanov.cfttestproject.data.users.domain.User
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import com.sultanov.cfttestproject.presentation.recyclerView.UserAdapter
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val viewModel: MainViewModel by viewModels {
         MainViewModel.Factory
     }
+    private lateinit var adapter: UserAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        viewModel.usersFlow.flowWithLifecycle(lifecycle)
-            .onEach(::doOnGetUsers)
-            .launchIn(lifecycle.coroutineScope)
+        setupRecyclerView()
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                viewModel.usersFlow.collect { users ->
+                    doOnGetUsers(users)
+                }
+            }
+        }
     }
 
     private fun doOnGetUsers(users: List<User>) {
+        adapter.submitList(users)
+    }
+
+    private fun setupRecyclerView() {
+        val rvUserList = findViewById<RecyclerView>(R.id.rv_random_user)
+        adapter = UserAdapter()
+        rvUserList.adapter = adapter
+        adapter.onUserOnClickListener = {
+            val intent = UserActivity.newIntent(this, it)
+            startActivity(intent)
+        }
 
     }
 }
+
