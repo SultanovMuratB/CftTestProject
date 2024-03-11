@@ -1,7 +1,7 @@
 package com.sultanov.cfttestproject.data.users.data
 
 import com.sultanov.cfttestproject.data.users.domain.RandomUserRepository
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 
 internal class RandomUserRepositoryImpl(
     private val usersServiceApi: UsersServiceApi,

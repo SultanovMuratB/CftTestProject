@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.RecyclerView
 import com.sultanov.cfttestproject.R
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 import com.sultanov.cfttestproject.presentation.recyclerView.UserAdapter
 import kotlinx.coroutines.launch
 

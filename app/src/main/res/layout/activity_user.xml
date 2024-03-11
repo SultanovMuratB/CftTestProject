@@ -15,18 +15,139 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/title_name_text_view"/>
+            android:id="@+id/title_name_user"
+            android:padding="8dp"
+            tools:text = "Title"
+            android:layout_margin="16dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/first_name_text_view"/>
+            android:id="@+id/first_name_user"
+            android:padding="8dp"
+            tools:text = "First"
+            android:layout_margin="16dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/last_name_text_view"/>
+            android:id="@+id/last_name_user"
+            android:padding="8dp"
+            tools:text = "Last"
+            android:layout_margin="16dp"
+            />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender_user"
+        android:padding="8dp"
+        tools:text = "Gender"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_user"
+        android:padding="8dp"
+        tools:text = "Email"
+        android:layout_margin="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_user"
+            android:padding="8dp"
+            tools:text = "Phone"
+            android:layout_margin="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cell_user"
+            android:padding="8dp"
+            tools:text = "Cell"
+            android:layout_margin="16dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dob_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "Dob"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/age_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "age"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "city"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/state_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "state"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/country_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "Country"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postcode_user"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            tools:text = "postcode"/>
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

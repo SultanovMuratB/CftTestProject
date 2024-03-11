@@ -1,7 +1,7 @@
 package com.sultanov.cfttestproject.presentation.recyclerView
 
 import androidx.recyclerview.widget.DiffUtil
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 
 internal class UserDiffCallback: DiffUtil.ItemCallback<User>() {
 

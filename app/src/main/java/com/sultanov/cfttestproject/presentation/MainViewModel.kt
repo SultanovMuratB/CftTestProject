@@ -10,7 +10,7 @@ import com.sultanov.cfttestproject.data.users.data.UsersMapperImpl
 import com.sultanov.cfttestproject.data.users.data.UsersServiceApi
 import com.sultanov.cfttestproject.data.users.domain.GetUsersUseCase
 import com.sultanov.cfttestproject.data.users.domain.GetUsersUseCaseImpl
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

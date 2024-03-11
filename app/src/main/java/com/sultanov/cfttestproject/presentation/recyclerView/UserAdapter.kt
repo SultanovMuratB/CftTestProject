@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sultanov.cfttestproject.R
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 
 internal class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(UserDiffCallback()) {
 

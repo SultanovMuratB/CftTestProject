@@ -1,17 +1,17 @@
 package com.sultanov.cfttestproject.data.users.data
 
 import com.sultanov.cfttestproject.data.users.data.dto.GetUsersResponseDto
-import com.sultanov.cfttestproject.data.users.domain.Coordinates
-import com.sultanov.cfttestproject.data.users.domain.Dob
-import com.sultanov.cfttestproject.data.users.domain.Id
-import com.sultanov.cfttestproject.data.users.domain.Location
-import com.sultanov.cfttestproject.data.users.domain.Login
-import com.sultanov.cfttestproject.data.users.domain.Name
-import com.sultanov.cfttestproject.data.users.domain.Picture
-import com.sultanov.cfttestproject.data.users.domain.Registered
-import com.sultanov.cfttestproject.data.users.domain.Street
-import com.sultanov.cfttestproject.data.users.domain.Timezone
-import com.sultanov.cfttestproject.data.users.domain.User
+import com.sultanov.cfttestproject.data.users.domain.entity.Coordinates
+import com.sultanov.cfttestproject.data.users.domain.entity.Dob
+import com.sultanov.cfttestproject.data.users.domain.entity.Id
+import com.sultanov.cfttestproject.data.users.domain.entity.Location
+import com.sultanov.cfttestproject.data.users.domain.entity.Login
+import com.sultanov.cfttestproject.data.users.domain.entity.Name
+import com.sultanov.cfttestproject.data.users.domain.entity.Picture
+import com.sultanov.cfttestproject.data.users.domain.entity.Registered
+import com.sultanov.cfttestproject.data.users.domain.entity.Street
+import com.sultanov.cfttestproject.data.users.domain.entity.Timezone
+import com.sultanov.cfttestproject.data.users.domain.entity.User
 import com.sultanov.cfttestproject.data.users.domain.UserMapper
 
 internal class UsersMapperImpl : UserMapper {
