@@ -1,18 +1,10 @@
 package com.sultanov.cfttestproject.presentation.userListScreen
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.initializer
-import androidx.lifecycle.viewmodel.viewModelFactory
-import com.sultanov.cfttestproject.data.users.data.RandomUserRepositoryImpl
-import com.sultanov.cfttestproject.data.users.data.UsersMapperImpl
-import com.sultanov.cfttestproject.data.users.data.UsersServiceApi
 import com.sultanov.cfttestproject.data.users.domain.GetUsersUseCase
-import com.sultanov.cfttestproject.data.users.domain.GetUsersUseCaseImpl
 import com.sultanov.cfttestproject.data.users.domain.entity.User
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -20,7 +12,7 @@ import javax.inject.Inject
 
 internal class MainViewModel @Inject constructor(
     private val getUsersUseCase: GetUsersUseCase,
-    private val ioDispatcher: CoroutineDispatcher,
+    ioDispatcher: CoroutineDispatcher,
 ) : ViewModel() {
 
     private val usersMutableFlow = MutableStateFlow<List<User>>(listOf())

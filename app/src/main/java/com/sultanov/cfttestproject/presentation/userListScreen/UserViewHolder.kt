@@ -4,7 +4,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sultanov.cfttestproject.R
-import javax.inject.Inject
 
 internal class UserViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val userName: TextView = view.findViewById(R.id.user_name)

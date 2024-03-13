@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.sultanov.cfttestproject.R
 import com.sultanov.cfttestproject.data.users.domain.entity.User
-import javax.inject.Inject
 
 internal class UserAdapter :
     ListAdapter<User, UserViewHolder>(UserDiffCallback()) {
