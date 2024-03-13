@@ -1,4 +1,4 @@
-package com.sultanov.cfttestproject.presentation
+package com.sultanov.cfttestproject.presentation.userScreen
 
 import android.content.Context
 import android.content.Intent

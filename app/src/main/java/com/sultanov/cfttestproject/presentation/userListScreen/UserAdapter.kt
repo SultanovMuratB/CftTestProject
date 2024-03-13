@@ -1,15 +1,14 @@
-package com.sultanov.cfttestproject.presentation.recyclerView
+package com.sultanov.cfttestproject.presentation.userListScreen
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.sultanov.cfttestproject.R
 import com.sultanov.cfttestproject.data.users.domain.entity.User
+import javax.inject.Inject
 
-internal class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(UserDiffCallback()) {
+internal class UserAdapter :
+    ListAdapter<User, UserViewHolder>(UserDiffCallback()) {
 
     var onUserOnClickListener: ((User) -> Unit)? = null
 
@@ -28,11 +27,5 @@ internal class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(UserD
         holder.userName.text = fullName
         holder.userEmail.text = user.email
         holder.userPhone.text = user.phone
-    }
-
-    class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val userName: TextView = view.findViewById(R.id.user_name)
-        val userEmail: TextView = view.findViewById(R.id.user_email)
-        val userPhone: TextView = view.findViewById(R.id.user_phone)
     }
 }

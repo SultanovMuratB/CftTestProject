@@ -1,4 +1,4 @@
-package com.sultanov.cfttestproject.presentation
+package com.sultanov.cfttestproject.presentation.userListScreen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -16,8 +16,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-internal class MainViewModel(
+internal class MainViewModel @Inject constructor(
     private val getUsersUseCase: GetUsersUseCase,
     private val ioDispatcher: CoroutineDispatcher,
 ) : ViewModel() {
@@ -29,23 +30,22 @@ internal class MainViewModel(
         viewModelScope.launch(ioDispatcher) {
             usersMutableFlow.value = getUsersUseCase.getUsers()
         }
-
     }
 
-    companion object {
-
-        val Factory: ViewModelProvider.Factory = viewModelFactory {
-            initializer {
-                MainViewModel(
-                    getUsersUseCase = GetUsersUseCaseImpl(
-                        randomUserRepository = RandomUserRepositoryImpl(
-                            usersServiceApi = UsersServiceApi.newInstance(),
-                            usersMapper = UsersMapperImpl(),
-                        ),
-                    ),
-                    ioDispatcher = Dispatchers.IO,
-                )
-            }
-        }
-    }
+//    companion object {
+//
+//        val Factory: ViewModelProvider.Factory = viewModelFactory {
+//            initializer {
+//                MainViewModel (
+//                    getUsersUseCase = GetUsersUseCaseImpl (
+//                        randomUserRepository = RandomUserRepositoryImpl(
+//                            usersServiceApi = UsersServiceApi.newInstance(),
+//                            usersMapper = UsersMapperImpl(),
+//                        ),
+//                    ),
+//                    ioDispatcher = Dispatchers.IO,
+//                )
+//            }
+//        }
+//    }
 }

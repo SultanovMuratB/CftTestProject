@@ -15,10 +15,10 @@
         android:theme="@style/Theme.CftTestProject"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.UserActivity"
+            android:name=".presentation.userScreen.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.userListScreen.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

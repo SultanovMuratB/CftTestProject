@@ -13,8 +13,9 @@ import com.sultanov.cfttestproject.data.users.domain.entity.Street
 import com.sultanov.cfttestproject.data.users.domain.entity.Timezone
 import com.sultanov.cfttestproject.data.users.domain.entity.User
 import com.sultanov.cfttestproject.data.users.domain.UserMapper
+import javax.inject.Inject
 
-internal class UsersMapperImpl : UserMapper {
+internal class UsersMapperImpl @Inject constructor() : UserMapper {
 
     override fun map(usersResponse: GetUsersResponseDto): List<User> {
         return usersResponse.users.map { user ->
